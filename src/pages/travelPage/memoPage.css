@@ -1,0 +1,152 @@
+/* CSS for the MemoPage popup component */
+
+.memo-popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 50;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.memo-popup-content {
+  background-color: #FFFBF2;
+  width: 100%;
+  max-width: 420px;
+  padding: 20px;
+  padding-top: 40px;
+  border-top-left-radius: 24px;
+  border-top-right-radius: 24px;
+  position: relative;
+  color: #333;
+  font-family: sans-serif;
+  animation: slide-up-memo 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+.memo-popup-content.closing {
+  animation: slide-down-memo 0.4s ease-out both;
+}
+
+@keyframes slide-up-memo {
+  from { transform: translateY(100%); }
+  to { transform: translateY(0); }
+}
+
+@keyframes slide-down-memo {
+  from { transform: translateY(0); }
+  to { transform: translateY(100%); }
+}
+
+.memo-close-btn {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #888;
+}
+
+.memo-popup-title {
+  text-align: center;
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 24px;
+}
+
+.memo-form-group, .memo-form-group-column {
+  position: relative;
+  margin-bottom: 16px;
+}
+
+.memo-form-row {
+  display: flex;
+  gap: 16px;
+}
+
+.memo-form-row .memo-form-group {
+  flex: 1;
+}
+
+.memo-input-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #9CA3AF;
+  width: 20px;
+  height: 20px;
+}
+
+.memo-input {
+  width: 100%;
+  padding: 12px 12px 12px 40px;
+  border: 1px solid #D1D5DB;
+  border-radius: 8px;
+  background-color: white;
+  font-size: 1rem;
+}
+
+.memo-label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #374151;
+}
+
+.memo-textarea {
+  width: 100%;
+  height: 100px;
+  padding: 12px;
+  border: 1px solid #D1D5DB;
+  border-radius: 8px;
+  resize: vertical;
+}
+
+.memo-upload-area {
+  border: 2px dashed #D1D5DB;
+  border-radius: 8px;
+  padding: 24px;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.memo-upload-icon {
+  color: #6B7280;
+  width: 40px;
+  height: 40px;
+  margin: 0 auto 12px;
+}
+
+.memo-upload-text {
+  font-weight: 600;
+  color: #374151;
+  margin: 0;
+}
+
+.memo-upload-subtext {
+  font-size: 0.875rem;
+  color: #6B7280;
+  margin: 4px 0 0 0;
+}
+
+.memo-save-btn {
+  width: 100%;
+  padding: 14px;
+  background-color: #4B320A;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.memo-save-btn:hover {
+  background-color: #3a2708;
+}

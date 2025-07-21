@@ -1,0 +1,144 @@
+/* CSS for walkPage.jsx - Quest popup styles have been removed and moved to questPage.css */
+
+.walk-page-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #4ade80; /* A fallback green */
+}
+
+/* Main content area that gets blurred */
+.map-view-background, .footer-navigation {
+  transition: filter 0.3s ease-in-out;
+}
+
+.blurred {
+  filter: blur(4px);
+  pointer-events: none; /* Prevents interaction with blurred background */
+}
+
+/* Map and Player Styles */
+.map-view-background {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.map-svg {
+  position: absolute;
+  inset: 0;
+}
+
+.map-path {
+  stroke: #fde68a;
+  stroke-width: 70;
+  fill: none;
+  stroke-linecap: round;
+}
+
+.player {
+  position: absolute;
+  bottom: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 96px;
+  height: 192px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 5;
+}
+
+.player-head {
+  width: 48px;
+  height: 48px;
+  background-color: #e7e5e4;
+  border-radius: 50%;
+  z-index: 10;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+}
+
+.player-body {
+  width: 80px;
+  height: 96px;
+  background-color: #0d9488;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  margin-top: -16px;
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+}
+
+.player-legs {
+  width: 80px;
+  height: 40px;
+  background-color: #d6d3d1;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  box-shadow: inset 0 2px 4px 0 rgb(0 0 0 / 0.05);
+}
+
+.player-shadow {
+  position: absolute;
+  bottom: -10px;
+  width: 70px;
+  height: 20px;
+  background-color: rgba(17, 24, 39, 0.25);
+  border-radius: 50%;
+  filter: blur(10px);
+  z-index: -1;
+}
+
+/* Button Styles */
+.quest-button {
+  position: absolute;
+  top: 15%;
+  left: 10%;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  background-color: #fef3c7;
+  border: 2px solid #fcd34d;
+  border-radius: 9999px;
+  color: #92400e;
+  font-weight: 600;
+  font-family: sans-serif;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.footer-navigation {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 20;
+  display: flex;
+  justify-content: space-around;
+  padding: 20px 16px;
+}
+
+.footer-btn, .footer-btn-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  cursor: pointer;
+  border: none;
+}
+
+.footer-btn {
+  width: 64px;
+  height: 64px;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.footer-btn-center {
+  width: 80px;
+  height: 80px;
+  background-color: #facc15;
+  transform: translateY(-20px);
+  border: 5px solid white;
+}
