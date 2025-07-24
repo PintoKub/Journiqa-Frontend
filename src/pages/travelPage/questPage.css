@@ -28,7 +28,7 @@
   
   /* Class to trigger the closing animation */
   .quest-popup-content.closing {
-    animation: slide-down 0.4s ease-out both;
+    animation: slide-down 0.2s ease-out both;
   }
   
   /* Opening animation */

@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 
 // Component Imports
 import QuestMenu from './questPage.jsx';
-import MemoPage from './MemoPage.jsx';
+import MemoPage from './memoPage.jsx';
 
 // Style and Icon Imports
 import './walkPage.css';
